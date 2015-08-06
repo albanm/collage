@@ -1,0 +1,286 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/helene/.nvm/versions/node/v0.12.7/bin/node',
+1 verbose cli   '/home/helene/.nvm/versions/node/v0.12.7/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'jshint',
+1 verbose cli   'jscs' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /home/helene/.nvm/versions/node/v0.12.7/lib/package.json
+5 verbose readDependencies loading dependencies from /home/helene/.nvm/versions/node/v0.12.7/lib/package.json
+6 silly cache add args [ 'jshint', null ]
+7 verbose cache add spec jshint
+8 silly cache add args [ 'jscs', null ]
+9 verbose cache add spec jscs
+10 silly cache add parsed spec { raw: 'jshint',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'jshint',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: '*',
+10 silly cache add   type: 'range' }
+11 silly addNamed jshint@*
+12 verbose addNamed "*" is a valid semver range for jshint
+13 silly addNameRange { name: 'jshint', range: '*', hasData: false }
+14 silly mapToRegistry name jshint
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry uri https://registry.npmjs.org/jshint
+18 verbose addNameRange registry:https://registry.npmjs.org/jshint not in flight; fetching
+19 silly cache add parsed spec { raw: 'jscs',
+19 silly cache add   scope: null,
+19 silly cache add   name: 'jscs',
+19 silly cache add   rawSpec: '',
+19 silly cache add   spec: '*',
+19 silly cache add   type: 'range' }
+20 silly addNamed jscs@*
+21 verbose addNamed "*" is a valid semver range for jscs
+22 silly addNameRange { name: 'jscs', range: '*', hasData: false }
+23 silly mapToRegistry name jscs
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry uri https://registry.npmjs.org/jscs
+27 verbose addNameRange registry:https://registry.npmjs.org/jscs not in flight; fetching
+28 verbose request uri https://registry.npmjs.org/jshint
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 22:16:56
+31 verbose request id 4acb0cba074f9c74
+32 http request GET https://registry.npmjs.org/jshint
+33 verbose request uri https://registry.npmjs.org/jscs
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 22:16:56
+36 http request GET https://registry.npmjs.org/jscs
+37 http 200 https://registry.npmjs.org/jscs
+38 silly get cb [ 200,
+38 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+38 silly get     etag: '"DF5SJ546EDQ3WFK7C5WWV30Q0"',
+38 silly get     'content-type': 'application/json',
+38 silly get     'cache-control': 'max-age=60',
+38 silly get     'content-length': '122963',
+38 silly get     'accept-ranges': 'bytes',
+38 silly get     date: 'Thu, 06 Aug 2015 20:16:58 GMT',
+38 silly get     via: '1.1 varnish',
+38 silly get     age: '55',
+38 silly get     connection: 'keep-alive',
+38 silly get     'x-served-by': 'cache-lhr6321-LHR',
+38 silly get     'x-cache': 'HIT',
+38 silly get     'x-cache-hits': '1',
+38 silly get     'x-timer': 'S1438892218.988339,VS0,VE2',
+38 silly get     vary: 'Accept' } ]
+39 verbose get saving jscs to /home/helene/.npm/registry.npmjs.org/jscs/.cache.json
+40 silly addNameRange number 2 { name: 'jscs', range: '*', hasData: true }
+41 silly addNameRange versions [ 'jscs',
+41 silly addNameRange   [ '0.0.1',
+41 silly addNameRange     '0.0.2',
+41 silly addNameRange     '0.0.3',
+41 silly addNameRange     '0.0.4',
+41 silly addNameRange     '0.0.5',
+41 silly addNameRange     '0.0.6',
+41 silly addNameRange     '0.0.7',
+41 silly addNameRange     '0.0.8',
+41 silly addNameRange     '0.0.9',
+41 silly addNameRange     '0.0.10',
+41 silly addNameRange     '0.0.11',
+41 silly addNameRange     '0.0.12',
+41 silly addNameRange     '1.0.0',
+41 silly addNameRange     '1.0.1',
+41 silly addNameRange     '1.0.2',
+41 silly addNameRange     '1.0.3',
+41 silly addNameRange     '1.0.4',
+41 silly addNameRange     '1.0.5',
+41 silly addNameRange     '1.0.6',
+41 silly addNameRange     '1.0.7',
+41 silly addNameRange     '1.0.8',
+41 silly addNameRange     '1.0.10',
+41 silly addNameRange     '1.0.11',
+41 silly addNameRange     '1.0.12',
+41 silly addNameRange     '1.0.13',
+41 silly addNameRange     '1.0.14',
+41 silly addNameRange     '1.0.15',
+41 silly addNameRange     '1.1.0',
+41 silly addNameRange     '1.2.0',
+41 silly addNameRange     '1.2.1',
+41 silly addNameRange     '1.2.2',
+41 silly addNameRange     '1.2.3',
+41 silly addNameRange     '1.2.4',
+41 silly addNameRange     '1.3.0',
+41 silly addNameRange     '1.4.0',
+41 silly addNameRange     '1.4.1',
+41 silly addNameRange     '1.4.2',
+41 silly addNameRange     '1.4.3',
+41 silly addNameRange     '1.4.4',
+41 silly addNameRange     '1.4.5',
+41 silly addNameRange     '1.5.1',
+41 silly addNameRange     '1.5.2',
+41 silly addNameRange     '1.5.3',
+41 silly addNameRange     '1.5.4',
+41 silly addNameRange     '1.5.6',
+41 silly addNameRange     '1.5.7',
+41 silly addNameRange     '1.5.8',
+41 silly addNameRange     '1.5.9',
+41 silly addNameRange     '1.6.0',
+41 silly addNameRange     '1.6.1',
+41 silly addNameRange     '1.6.2',
+41 silly addNameRange     '1.7.0',
+41 silly addNameRange     '1.7.1',
+41 silly addNameRange     '1.7.2',
+41 silly addNameRange     '1.7.3',
+41 silly addNameRange     '1.8.0',
+41 silly addNameRange     '1.8.1',
+41 silly addNameRange     '1.9.0',
+41 silly addNameRange     '1.10.0',
+41 silly addNameRange     '1.11.0',
+41 silly addNameRange     '1.11.1',
+41 silly addNameRange     '1.11.2',
+41 silly addNameRange     '1.11.3',
+41 silly addNameRange     '1.12.0',
+41 silly addNameRange     '1.13.0',
+41 silly addNameRange     '1.13.1',
+41 silly addNameRange     '2.0.0' ] ]
+42 silly addNamed jscs@2.0.0
+43 verbose addNamed "2.0.0" is a plain semver version for jscs
+44 silly mapToRegistry name jscs
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/jscs
+48 verbose addRemoteTarball https://registry.npmjs.org/jscs/-/jscs-2.0.0.tgz not in flight; adding
+49 verbose addRemoteTarball [ 'https://registry.npmjs.org/jscs/-/jscs-2.0.0.tgz',
+49 verbose addRemoteTarball   '35d06dddd1da48da31034941183cfb5ef97b4553' ]
+50 info retry fetch attempt 1 at 22:17:03
+51 info attempt registry request try #1 at 22:17:03
+52 http fetch GET https://registry.npmjs.org/jscs/-/jscs-2.0.0.tgz
+53 http fetch 200 https://registry.npmjs.org/jscs/-/jscs-2.0.0.tgz
+54 http 200 https://registry.npmjs.org/jshint
+55 silly get cb [ 200,
+55 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+55 silly get     etag: '"G9561MH4XUZS8T2K8YB5INUN"',
+55 silly get     'content-type': 'application/json',
+55 silly get     'cache-control': 'max-age=60',
+55 silly get     'content-length': '100359',
+55 silly get     'accept-ranges': 'bytes',
+55 silly get     date: 'Thu, 06 Aug 2015 20:16:59 GMT',
+55 silly get     via: '1.1 varnish',
+55 silly get     age: '0',
+55 silly get     connection: 'keep-alive',
+55 silly get     'x-served-by': 'cache-lhr6320-LHR',
+55 silly get     'x-cache': 'HIT',
+55 silly get     'x-cache-hits': '1',
+55 silly get     'x-timer': 'S1438892218.963180,VS0,VE94',
+55 silly get     vary: 'Accept' } ]
+56 verbose get saving jshint to /home/helene/.npm/registry.npmjs.org/jshint/.cache.json
+57 silly addNameRange number 2 { name: 'jshint', range: '*', hasData: true }
+58 silly addNameRange versions [ 'jshint',
+58 silly addNameRange   [ '0.1.8',
+58 silly addNameRange     '0.1.9',
+58 silly addNameRange     '0.2.0',
+58 silly addNameRange     '0.2.1',
+58 silly addNameRange     '0.2.2',
+58 silly addNameRange     '0.2.3',
+58 silly addNameRange     '0.3.0',
+58 silly addNameRange     '0.3.1',
+58 silly addNameRange     '0.4.0',
+58 silly addNameRange     '0.5.0',
+58 silly addNameRange     '0.5.1',
+58 silly addNameRange     '0.5.2',
+58 silly addNameRange     '0.5.3',
+58 silly addNameRange     '0.5.4',
+58 silly addNameRange     '0.5.5',
+58 silly addNameRange     '0.5.6',
+58 silly addNameRange     '0.5.7',
+58 silly addNameRange     '0.5.8',
+58 silly addNameRange     '0.5.9',
+58 silly addNameRange     '0.6.0',
+58 silly addNameRange     '0.6.1',
+58 silly addNameRange     '0.6.2',
+58 silly addNameRange     '0.6.3',
+58 silly addNameRange     '0.7.0',
+58 silly addNameRange     '0.7.1',
+58 silly addNameRange     '0.7.2',
+58 silly addNameRange     '0.7.3',
+58 silly addNameRange     '0.8.0',
+58 silly addNameRange     '0.8.1',
+58 silly addNameRange     '0.8.2',
+58 silly addNameRange     '0.9.0',
+58 silly addNameRange     '0.9.1',
+58 silly addNameRange     '1.0.0',
+58 silly addNameRange     '1.1.0',
+58 silly addNameRange     '2.0.0',
+58 silly addNameRange     '2.0.1',
+58 silly addNameRange     '2.1.0',
+58 silly addNameRange     '2.1.1',
+58 silly addNameRange     '2.1.2',
+58 silly addNameRange     '2.1.3',
+58 silly addNameRange     '2.1.4',
+58 silly addNameRange     '2.1.5',
+58 silly addNameRange     '2.1.6',
+58 silly addNameRange     '2.1.7',
+58 silly addNameRange     '2.1.8',
+58 silly addNameRange     '2.1.9',
+58 silly addNameRange     '2.1.10',
+58 silly addNameRange     '2.1.11',
+58 silly addNameRange     '2.2.0',
+58 silly addNameRange     '2.3.0',
+58 silly addNameRange     '2.4.0',
+58 silly addNameRange     '2.4.1',
+58 silly addNameRange     '2.4.2',
+58 silly addNameRange     '2.4.3',
+58 silly addNameRange     '2.4.4',
+58 silly addNameRange     '2.5.0',
+58 silly addNameRange     '2.5.1',
+58 silly addNameRange     '2.5.2',
+58 silly addNameRange     '2.5.3',
+58 silly addNameRange     '2.5.4',
+58 silly addNameRange     '2.5.5',
+58 silly addNameRange     '2.5.6',
+58 silly addNameRange     '2.5.7',
+58 silly addNameRange     '2.5.8',
+58 silly addNameRange     '2.5.9',
+58 silly addNameRange     '2.5.10',
+58 silly addNameRange     '2.5.11',
+58 silly addNameRange     '2.6.0',
+58 silly addNameRange     '2.6.1',
+58 silly addNameRange     '2.6.2',
+58 silly addNameRange     '2.6.3',
+58 silly addNameRange     '2.7.0',
+58 silly addNameRange     '2.8.0' ] ]
+59 silly addNamed jshint@2.8.0
+60 verbose addNamed "2.8.0" is a plain semver version for jshint
+61 silly mapToRegistry name jshint
+62 silly mapToRegistry using default registry
+63 silly mapToRegistry registry https://registry.npmjs.org/
+64 silly mapToRegistry uri https://registry.npmjs.org/jshint
+65 verbose addRemoteTarball https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz not in flight; adding
+66 verbose addRemoteTarball [ 'https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz',
+66 verbose addRemoteTarball   '1d09a3bd913c4cadfa81bf18d582bd85bffe0d44' ]
+67 info retry fetch attempt 1 at 22:17:10
+68 info attempt registry request try #1 at 22:17:10
+69 http fetch GET https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz
+70 http fetch 200 https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz
+71 silly fetchAndShaCheck shasum 1d09a3bd913c4cadfa81bf18d582bd85bffe0d44
+72 silly fetchAndShaCheck shasum 35d06dddd1da48da31034941183cfb5ef97b4553
+73 verbose addTmpTarball /tmp/npm-11451-ef5e3872/registry.npmjs.org/jscs/-/jscs-2.0.0.tgz not in flight; adding
+74 verbose addTmpTarball already have metadata; skipping unpack for jscs@2.0.0
+75 silly cache afterAdd jscs@2.0.0
+76 verbose afterAdd /home/helene/.npm/jscs/2.0.0/package/package.json not in flight; writing
+77 verbose afterAdd /home/helene/.npm/jscs/2.0.0/package/package.json written
+78 verbose stack Error: shasum check failed for /tmp/npm-11451-ef5e3872/registry.npmjs.org/jshint/-/jshint-2.8.0.tgz
+78 verbose stack Expected: 1d09a3bd913c4cadfa81bf18d582bd85bffe0d44
+78 verbose stack Actual:   4f428633fc0590e113bb2d9f8198edc6c96eebd9
+78 verbose stack From:     https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz
+78 verbose stack     at /home/helene/.nvm/versions/node/v0.12.7/lib/node_modules/npm/node_modules/sha/index.js:38:8
+78 verbose stack     at ReadStream.<anonymous> (/home/helene/.nvm/versions/node/v0.12.7/lib/node_modules/npm/node_modules/sha/index.js:85:7)
+78 verbose stack     at ReadStream.emit (events.js:129:20)
+78 verbose stack     at _stream_readable.js:908:16
+78 verbose stack     at process._tickCallback (node.js:355:11)
+79 verbose cwd /home/helene/alban/git/collage
+80 error Linux 3.13.0-55-generic
+81 error argv "/home/helene/.nvm/versions/node/v0.12.7/bin/node" "/home/helene/.nvm/versions/node/v0.12.7/bin/npm" "install" "-g" "jshint" "jscs"
+82 error node v0.12.7
+83 error npm  v2.11.3
+84 error shasum check failed for /tmp/npm-11451-ef5e3872/registry.npmjs.org/jshint/-/jshint-2.8.0.tgz
+84 error Expected: 1d09a3bd913c4cadfa81bf18d582bd85bffe0d44
+84 error Actual:   4f428633fc0590e113bb2d9f8198edc6c96eebd9
+84 error From:     https://registry.npmjs.org/jshint/-/jshint-2.8.0.tgz
+85 error If you need help, you may report this error at:
+85 error     <https://github.com/npm/npm/issues>
+86 verbose exit [ 1, true ]

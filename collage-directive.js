@@ -1,5 +1,5 @@
 angular.module('angular').directive('collage', function() {
-		function link(scope, element, attributes) {
+		return function link(scope, element, attributes) {
 
 		}
 	});
