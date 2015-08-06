@@ -24,24 +24,7 @@
     <div layout="column" flex id="content">
       <md-content layout="column" flex class="md-padding">
 
-        <!--<md-grid-list
-          md-cols-gt-md="12" md-cols-sm="3" md-cols-md="8"
-          md-row-height-gt-md="1:1" md-row-height="4:3"
-          md-gutter-gt-md="16px" md-gutter-gt-sm="8px" md-gutter="4px">
-          <md-grid-tile ng-repeat="image in images.wikimedia">
-            <img ng-src="{{image}}"></img>
-          </md-grid-tile>
-        </md-grid-list>-->
-
-        <!--<div class='md-padding' layout="row" flex>
-          <div layout="row" flex>
-            <div layout="column" flex>
-              <md-card class="card" data-ng-repeat="image in images.wikimedia">
-                <img ng-src="{{image}}">
-              </md-card>
-            </div>
-          </div>
-        </div>-->
+        <canvas id="mainCanvas"></canvas>
 
       </md-content>
     </div>
@@ -55,6 +38,7 @@
 
   <script src="app.js"></script>
   <script src="images.js"></script>
+  <script src="model.js"></script>
 
 </body>
 
