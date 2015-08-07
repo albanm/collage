@@ -24,11 +24,15 @@
     <div layout="column" flex id="content">
       <md-content layout="column" flex class="md-padding">
 
-        <!--<pre>
-          {{images.wikimedia|json}}
-        </pre>-->
+        <pre>
+          {{imageCollections[0].loaded}}
+        </pre>
 
-        <div image-collection="images.wikimedia"></div>
+        <pre ng-if="images[0].loaded">
+          {{imageCollections[0].images[0].dataSmall}}
+        </pre>
+
+        <div image-collection="imageCollections[0]" ng-show="true"></div>
 
       </md-content>
     </div>
@@ -42,7 +46,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
 
   <script src="app.js"></script>
-  <script src="images.js"></script>
+  <script src="imageCollections.js"></script>
   <script src="imagesLoaded.js"></script>
   <script src="image-collection-directive.js"></script>
   <!--<script src="collage-directive.js"></script>-->

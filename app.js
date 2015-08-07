@@ -1,5 +1,5 @@
 var app = angular.module('collage', ['ngMaterial']);
 
-app.controller('collageCtrl', ['$scope', 'images', function($scope, images) {
-  $scope.images = images;
+app.controller('collageCtrl', ['$scope', 'imageCollections', function($scope, imageCollections) {
+  $scope.imageCollections = imageCollections;
 }]);
