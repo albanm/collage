@@ -1,9 +1,9 @@
-angular.module('collage').constant('imageCollections', [{
+angular.module('collage').constant('imageCollectionsData', [{
   title: 'wikimedia',
   description: 'A sample from wikimedia pictures of the day',
   images: [{
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Amanhecer_no_Hercules_--.jpg/300px-Amanhecer_no_Hercules_--.jpg'
-  }/*, {
+  }, {
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Giant_Manta_AdF.jpg/300px-Giant_Manta_AdF.jpg'
   }, {
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/View_from_a_ridge_between_Segla_and_Hesten%2C_Senja%2C_Norway%2C_2014_August.jpg/300px-View_from_a_ridge_between_Segla_and_Hesten%2C_Senja%2C_Norway%2C_2014_August.jpg'
@@ -121,5 +121,5 @@ angular.module('collage').constant('imageCollections', [{
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/KotaKinabalu_Sabah_CityMosque-08.jpg/300px-KotaKinabalu_Sabah_CityMosque-08.jpg'
   }, {
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Neutral_density_filter_demonstration.jpg/300px-Neutral_density_filter_demonstration.jpg'
-  }*/]
+  }]
 }]);
