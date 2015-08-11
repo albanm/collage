@@ -3,7 +3,7 @@ angular.module('collage').service('Collage', function($log) {
 	function Collage(images, target, data) {
 		this.images = images;
 		this.target = target;
-		
+
 		this.canvas = document.createElement("canvas");
 		this.canvas.width = this.target.original.width / 2;
 		this.canvas.height = this.target.original.height / 2;
@@ -31,16 +31,46 @@ angular.module('collage').service('Collage', function($log) {
 		});
 	};
 
-	Collage.prototype.fitness = function() {
+	Collage.prototype.mutate = function() {
+		//var _this = this;
+		//var item = this.data[Math.floor(Math.random() * this.data.length)];
+		return this;
+	};
+
+	Collage.prototype.distance = function() {
 		this.render();
-		//var currentImageData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);
 
-		// Sources;
-		// http://stackoverflow.com/questions/5392061/algorithm-to-check-similarity-of-colors-based-on-rgb-values-or-maybe-hsv
-		// https://en.wikipedia.org/wiki/Color_difference
-		// Utiliser HUSL (http://www.husl-colors.org/)
+		$log.debug('[collage model] prepare processing collage distance with target');
+		var d = new Date();
 
-		return 1;
+		var currentImageData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);
+
+		// see http://www.compuphase.com/cmetric.htm
+		// for a weighted euclidian distance of 2 colors in RGB space
+		var distances = [];
+		var r1, r2, g1, g2, b1, b2, meanR, weightedR, weightedG, weightedB;
+		for (var i = 0; i < currentImageData.data.length; i += 4) {
+			r1 = currentImageData.data[i];
+			r2 = this.targetImageData.data[i];
+			g1 = currentImageData.data[i + 1];
+			g2 = this.targetImageData.data[i + 1];
+			b1 = currentImageData.data[i + 2];
+			b2 = this.targetImageData.data[i + 2];
+			// ignore transparency ?
+
+			meanR = (r1 + r2) / 2;
+			weightedR = (2 + meanR / 256) * Math.pow(r1 - r2, 2);
+			weightedG = 4 * Math.pow(g1 - g2, 2);
+			weightedB = (2 + ((255 - meanR) / 256)) * Math.pow(b1 - b2, 2);
+			distances.push(Math.sqrt(weightedR + weightedG + weightedB));
+		}
+
+		var sum = distances.reduce(function(a, b) {
+			return a + b;
+		});
+
+		$log.debug('[collage model] processed collage distance with target in %sms', new Date() - d);
+		return sum / distances.length;
 	};
 
 	Collage.prototype.render = function() {

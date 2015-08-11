@@ -4,6 +4,7 @@
 	"globals": {
 		"angular": false,
 		"Image": false,
-		"document": false
+		"document": false,
+		"Genetic": false
 	}
 }
