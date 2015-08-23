@@ -1,6 +1,8 @@
 angular.module('collage').directive('collage', function() {
 	return function link(scope, element, attributes) {
-		var collage = scope.$eval(attributes.collage);
-		element.append(collage.render());
+		scope.$watch(attributes.collage, function(collage){
+			element.empty();
+			element.append(collage.render());
+		});
 	};
 });

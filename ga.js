@@ -1,10 +1,9 @@
-angular.module('collage').service('GA', function($log, Collage) {
+angular.module('collage').service('GA', function($log, Collage, collageUtils) {
   function GA(images, target) {
     var _this = this;
 
     // forces to use global vars with genetics-js
-    window.Collage = Collage;
-    window.collage = new Collage(images, target);
+    var collage = new Collage(images, target);
 
     var genetic = Genetic.create();
 
@@ -13,37 +12,63 @@ angular.module('collage').service('GA', function($log, Collage) {
     genetic.select2 = Genetic.Select2.Tournament2;
 
     genetic.seed = function() {
-      return window.collage.randomData();
+      return this.userData.collageUtils.randomData(this.userData.dataSize);
     };
 
-    genetic.fitness = function(data) {
-      window.collage.data = data;
-      return window.collage.distance();
+    genetic.fitness = function(data, callback) {
+      var that = this;
+      this.callerFunctions.getImageData(data, function(currentImageData){
+        callback(that.userData.collageUtils.distanceRGB(that.userData.targetImageData, currentImageData));
+      });
     };
 
     genetic.mutate = function(data) {
-      return window.Collage.mutate(data);
+      return this.userData.collageUtils.mutate(data);
     };
 
     genetic.crossover = function(motherData, fatherData) {
-      return window.Collage.crossover(motherData, fatherData);
+      return this.userData.collageUtils.crossover(motherData, fatherData);
     };
 
     genetic.notification = function(pop, generation, stats, isFinished) {
+      _this.generationN = _this.generationN === undefined ? 1 : _this.generationN + 1;
       _this.isFinished = isFinished;
       _this.pop = pop;
       _this.generation = generation;
       _this.stats = stats;
       _this.fittest = pop[0].entity;
       $log.debug(stats);
+      if (_this.notify) {
+        _this.notify();
+      }
     };
 
-    genetic.evolve({
-      webWorkers: false,
-      iterations: 1000,
-      maxResults: 1
+    genetic.evolve(
+      // config
+    {
+      //webWorkers: false,
+      iterations: 4000,
+      maxResults: 1,
+      size: 100,
+      crossover: 0.8,
+      mutation: 0.3
+    },
+    // userData (serialized to the web worker)
+    {
+      collageUtils: collageUtils,
+      dataSize: images.length,
+      targetImageData: collage.targetImageData
+    },
+    // callerFunctions (called from the worker to this context using message passing)
+    {
+      getImageData: function(data, callback) {
+        collage.data = data;
+        collage.render();
+        callback(collage.currentImageData);
+      }
     });
 
+    return this;
   }
 
   return GA;

@@ -3,3 +3,7 @@
   font-weight: inherit;
   margin: inherit;
 }
+
+body, html {
+	height: auto;
+}

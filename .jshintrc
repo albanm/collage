@@ -5,6 +5,11 @@
 		"angular": false,
 		"Image": false,
 		"document": false,
-		"Genetic": false
+		"Genetic": false,
+		"window": false,
+		"$": false,
+		"Random": false,
+		"setTimeout": false,
+		"Uint8ClampedArray": false
 	}
 }

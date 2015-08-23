@@ -28,10 +28,16 @@
           {{collage|json}}
         </pre>-->
 
-        distance: {{distance}}
+        <button ng-click="runGA()" ng-enabled="{{collection.loaded && target.loaded}}">Run GA</button>
+        Target: <div><img ng-src="{{target.src}}"></img></div>
+        <br>
+        Fittest:
         <div collage="collage" ng-if="collage"></div>
-
-        <!--GA: <pre>{{ga | json}}</pre>-->
+        <br>
+        Generation: {{ga.generationN}}
+        <br>
+        Stats:
+        <pre>{{ga.stats | json}}</pre>
 
       </md-content>
     </div>
@@ -44,12 +50,17 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
 
-  <script src="https://cdn.rawgit.com/subprotocol/genetic-js/master/lib/genetic.js"></script>
+  <!--<script src="https://cdn.rawgit.com/subprotocol/genetic-js/master/lib/genetic.js"></script>-->
+  <script src="https://cdn.rawgit.com/albanm/genetic-js/async/lib/genetic.js"></script>
+  <!--<script src="../genetic-js/lib/genetic.js"></script>-->
+
   <script src="random-0.26.js"></script>
+  <script src="https://cdn.rawgit.com/husl-colors/husl/master/husl.min.js"></script>
 
   <script src="app.js"></script>
   <script src="image-collections-data.js"></script>
   <script src="collage-directive.js"></script>
+  <script src="collage-utils.js"></script>
   <script src="collage-model.js"></script>
   <script src="image-model.js"></script>
   <script src="image-collection-model.js"></script>
