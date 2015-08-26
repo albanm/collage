@@ -28,7 +28,9 @@
           {{collage|json}}
         </pre>-->
 
-        <button ng-click="runGA()" ng-enabled="{{collection.loaded && target.loaded}}">Run GA</button>
+	{{collection.loaded}}
+	{{target.loaded}}
+        <button ng-click="runGA()" ng-disabled="{{!(collection.loaded && target.loaded)}}">Run GA</button>
         Target: <div><img ng-src="{{target.src}}"></img></div>
         <br>
         Fittest:

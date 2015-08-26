@@ -3,7 +3,12 @@ angular.module('collage').service('ImageItem', function($q) {
   // Promisify native browser image loading
   function imagePromise(src, width, height) {
     var deferred = $q.defer();
-    var img = new Image(width, height);
+    var img;
+    if (width !== undefined && height !== undefined) {
+        img = new Image(width, height);
+    } else {
+        img = new Image();
+    }
 
     // See cross-origin canvas issue: http://stackoverflow.com/questions/22097747/getimagedata-error-the-canvas-has-been-tainted-by-cross-origin-data
     img.crossOrigin = 'Anonymous';
