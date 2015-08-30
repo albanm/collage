@@ -1,0 +1,62 @@
+<html lang="en" ng-app="collage">
+
+<head>
+  <title>Collage - test application for directives and models</title>
+</head>
+
+<body layout="column" ng-controller="collageTestCtrl">
+  <h1>Collage - test application for directives and models</h1>
+  
+  Collection is loaded ? {{collection.loaded ? 'yes' : 'no'}}.
+
+  <h2>Random collage<h2>
+  
+  <button ng-click="newRandomCollage()" ng-disabled="!collection.loaded">another</button>
+  <div collage="randomCollage"></div>
+
+  <h2>Genetic algorithm</h2>
+
+  
+  t:{{target.loaded}}
+  <button ng-click="runGA()" ng-disabled="!collection.loaded">Run GA</button>
+  <br>
+  Fittest:
+  <div collage="ga.fittest"></div>
+  <br>
+  Generation: {{ga.generationN}}
+  <br>
+  Stats:
+  <pre>{{ga.stats | json}}</pre>
+  <br>
+  Arranged fittest:
+  <div collage="gaCollage"></div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+
+  <!--<script src="https://cdn.rawgit.com/subprotocol/genetic-js/master/lib/genetic.js"></script>-->
+  <script src="https://cdn.rawgit.com/albanm/genetic-js/async/lib/genetic.js"></script>
+  <!--<script src="../genetic-js/lib/genetic.js"></script>-->
+
+  <script src="random-0.26.js"></script>
+  <script src="https://cdn.rawgit.com/husl-colors/husl/master/husl.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-flow/2.6.1/ng-flow-standalone.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="test.js"></script>
+  <script src="image-collections-data.js"></script>
+  <script src="collage-directive.js"></script>
+  <script src="collage-utils.js"></script>
+  <script src="collage-model.js"></script>
+  <script src="image-model.js"></script>
+  <script src="image-collection-model.js"></script>
+  <script src="ga.js"></script>
+  <script src="file-reader.js"></script>
+
+</body>
+
+</html>

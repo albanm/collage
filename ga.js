@@ -1,9 +1,18 @@
 angular.module('collage').service('GA', function($log, Collage, collageUtils) {
-  function GA(images, target) {
+  function GA(options) {
     var _this = this;
+    var images = options.images;
+    var target = options.target;
+
+    var width = 200;
+    var height = target.original.height * (200 / target.original.width);
 
     // forces to use global vars with genetics-js
-    var collage = new Collage(images, target);
+    var collage = new Collage({
+      images: images,
+      width: width,
+      height: height
+    });
 
     var genetic = Genetic.create();
 
@@ -36,7 +45,13 @@ angular.module('collage').service('GA', function($log, Collage, collageUtils) {
       _this.pop = pop;
       _this.generation = generation;
       _this.stats = stats;
-      _this.fittest = pop[0].entity;
+      _this.fittestData = pop[0].entity;
+      _this.fittest = new Collage({
+        images: images,
+        width: width,
+        height: height,
+        data: _this.fittestData
+      });
       $log.debug(stats);
       if (_this.notify) {
         _this.notify();
@@ -47,17 +62,17 @@ angular.module('collage').service('GA', function($log, Collage, collageUtils) {
       // config
     {
       //webWorkers: false,
-      iterations: 4000,
+      iterations: options.iterations || 200,
       maxResults: 1,
-      size: 100,
-      crossover: 0.8,
-      mutation: 0.3
+      size: options.size || 200,
+      crossover: options.crossover || 0.8,
+      mutation: options.motation || 0.2
     },
     // userData (serialized to the web worker)
     {
       collageUtils: collageUtils,
       dataSize: images.length,
-      targetImageData: collage.targetImageData
+      targetImageData: collageUtils.getImageData(target.original, width, height)
     },
     // callerFunctions (called from the worker to this context using message passing)
     {

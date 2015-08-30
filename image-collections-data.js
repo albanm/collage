@@ -17,7 +17,7 @@ angular.module('collage').constant('imageCollectionsData', [{
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Refugio_Militar_Capitan_Cobo_-_Pico_Veleta_-_Sierra_Nevada_-_2014-08-07.jpg/300px-Refugio_Militar_Capitan_Cobo_-_Pico_Veleta_-_Sierra_Nevada_-_2014-08-07.jpg'
   }, {
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Naajaat_panorama_2007-08-09_2_cropped_USM_downsampled_edit.jpg/300px-Naajaat_panorama_2007-08-09_2_cropped_USM_downsampled_edit.jpg'
-  }, {
+  }/*, {
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Paris%2C_Notre_Dame_--_2014_--_1458.jpg/300px-Paris%2C_Notre_Dame_--_2014_--_1458.jpg'
   }, {
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ca%C3%B1%C3%B3n_Flosagja%2C_Parque_Nacional_de_%C3%9Eingvellir%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_043.JPG/300px-Ca%C3%B1%C3%B3n_Flosagja%2C_Parque_Nacional_de_%C3%9Eingvellir%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_043.JPG'
@@ -121,5 +121,5 @@ angular.module('collage').constant('imageCollectionsData', [{
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/KotaKinabalu_Sabah_CityMosque-08.jpg/300px-KotaKinabalu_Sabah_CityMosque-08.jpg'
   }, {
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Neutral_density_filter_demonstration.jpg/300px-Neutral_density_filter_demonstration.jpg'
-  }]
+  }*/]
 }]);

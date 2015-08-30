@@ -7,3 +7,17 @@
 body, html {
 	height: auto;
 }
+
+.md-sidenav-left .thumbnail, .md-sidenav-left .thumbnail img {
+	width: 100%;
+}
+
+.thumbnail button {
+	position: absolute;
+	right: 0px;
+}
+
+
+#copntent canvas, #content img {
+	width: 100%;
+}

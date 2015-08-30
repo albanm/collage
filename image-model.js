@@ -32,11 +32,11 @@ angular.module('collage').service('ImageItem', function($q) {
     var _this = this;
     return imagePromise(_this.src).then(function(img) {
       _this.original = img;
-      return imagePromise(_this.src, 20, img.height * (20 / img.width)).then(function(imgSmall) {
-        _this.small = imgSmall;
-        _this.loaded = true;
-        return _this;
-      });
+      //return imagePromise(_this.src, 20, img.height * (20 / img.width)).then(function(imgSmall) {
+      //  _this.small = imgSmall;
+      _this.loaded = true;
+      return _this;
+      //});
     });
   };
 

@@ -10,6 +10,7 @@
 		"$": false,
 		"Random": false,
 		"setTimeout": false,
-		"Uint8ClampedArray": false
+		"Uint8ClampedArray": false,
+		"FileReader": false
 	}
 }

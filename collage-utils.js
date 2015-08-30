@@ -44,10 +44,19 @@ angular.module('collage').service('collageUtils', function() {
 		return data;
 	};
 
+	utils.getImageData = function(img, width, height){
+		var canvas = document.createElement('canvas');
+    	canvas.width = width;
+    	canvas.height = height;
+    	var context = canvas.getContext('2d');
+    	context.drawImage(img, 0, 0, width, height);
+    	return context.getImageData(0, 0, width, height);
+	};
+
 	utils.mutate = function(data) {
 		var that = this;
 		data.forEach(function(item) {
-			// Select data elements to mutate. 1 in 10, for now.
+			// Select data elements to mutate. 1 in 20, for now.
 			if (Math.random() < 0.05) {
 				// Select attribute (x,y,z or c) to mutate
 				var keys = Object.keys(item);
